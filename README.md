@@ -25,7 +25,7 @@ A local input-mapping tool for Android　·　No memory reading　·　No game f
 
 | Version | Size | Requires | Download |
 | --- | --- | --- | --- |
-| **v1.4.6** | 1.8 MB | Android 7.0+ | [**Download APK**](https://github.com/WeilerQi/Qivomo/releases/download/v1.4.6/Qivomo-1.4.6.apk) |
+| **v1.4.6** | 1.8 MB | Android 7.0+ | [**Download APK**](https://github.com/WeilerQi/Qivomo/releases/download/v1.4.6/Qivomo-v1.4.6.apk) |
 
 > Only the signed release build is published. If a copy of Qivomo has been repackaged, re-signed or otherwise modified by a third party, it did not come from this project — do not install it.
 
