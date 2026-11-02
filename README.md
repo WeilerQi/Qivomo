@@ -1,6 +1,6 @@
 <div align="center">
 
-![Qivomo](assets/Qivomo_icon-round.png)
+<img src="assets/Qivomo_icon-round.png" width="140" alt="Qivomo" />
 
 # Qivomo
 
