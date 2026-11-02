@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/icon.png" width="140" alt="Qivomo" />
+![Qivomo](assets/Qivomo_icon-round.png)
 
 # Qivomo
 
@@ -8,14 +8,21 @@
 
 A local input-mapping tool for Android　·　No memory reading　·　No game files touched　·　No network access
 
-[![Version](https://img.shields.io/badge/version-v1.4.6-4F7CAC?style=flat-square)](https://github.com/WeilerQi/Qivomo/releases)
-[![Platform](https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](#-requirements)
-[![Size](https://img.shields.io/badge/size-1.8%20MB-9C6ADE?style=flat-square)](https://github.com/WeilerQi/Qivomo/releases)
-[![License](https://img.shields.io/badge/license-proprietary%20%C2%B7%20free%20to%20use-555?style=flat-square)](#-about-this-repository)
+![Version](https://img.shields.io/badge/version-v1.4.6-4F7CAC?style=flat-square)
 
-[**⬇️ Download the latest version**](https://github.com/WeilerQi/Qivomo/releases)　|　[Changelog](CHANGELOG.md)　|　[Disclaimer](DISCLAIMER.md)　|　[Report an issue](https://github.com/WeilerQi/Qivomo/issues)
+![Platform](https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat-square\&logo=android\&logoColor=white)
 
-**English**　|　[简体中文](https://gitee.com/weiler_qi/qivomo)
+![Size](https://img.shields.io/badge/size-1.8%20MB-9C6ADE?style=flat-square)
+
+![License](https://img.shields.io/badge/license-proprietary%20%C2%B7%20free%20to%20use-555?style=flat-square)
+
+|                                                                                    |                             |                               |                                                               |
+| ---------------------------------------------------------------------------------- | --------------------------- | ----------------------------- | ------------------------------------------------------------- |
+| [**⬇️ Download the latest version**](https://github.com/WeilerQi/Qivomo/releases)　 | 　[Changelog](CHANGELOG.md)　 | 　[Disclaimer](DISCLAIMER.md)　 | 　[Report an issue](https://github.com/WeilerQi/Qivomo/issues) |
+
+|              |                                             |
+| ------------ | ------------------------------------------- |
+| **English**　 | 　[简体中文](https://gitee.com/weiler_qi/qivomo) |
 
 </div>
 
@@ -23,16 +30,16 @@ A local input-mapping tool for Android　·　No memory reading　·　No game f
 
 ## 📥 Download
 
-| Version | Size | Requires | Download |
-| --- | --- | --- | --- |
+| Version    | Size   | Requires     | Download                                                                                         |
+| ---------- | ------ | ------------ | ------------------------------------------------------------------------------------------------ |
 | **v1.4.6** | 1.8 MB | Android 7.0+ | [**Download APK**](https://github.com/WeilerQi/Qivomo/releases/download/v1.4.6/Qivomo-1.4.6.apk) |
 
 > Only the signed release build is published. If a copy of Qivomo has been repackaged, re-signed or otherwise modified by a third party, it did not come from this project — do not install it.
 
-> ⚠️ **Upgrading from v1.4.5 to v1.4.6 requires a clean install.** v1.4.6 is signed with a new release key, and Android refuses to overwrite an app signed by a different key. Before uninstalling, export your configuration from the old build under **Settings → General → Export**; re-import it after installing v1.4.6.
+> ⚠️ **Upgrading from v1.4.5 to v1.4.6 requires a clean install.** v1.4.6 is signed with a new release key, and Android refuses to overwrite an app signed by a different key. Before uninstalling, export your configuration from the old build under **Settings → General → Export**; re-import it after installing v1.4.6.  
 > From v1.4.6 onward every release shares the same key, so later upgrades install over the top as usual.
 
-> On your phone, just tap the downloaded file to install. If Android warns about an unknown source, allow your browser or file manager to install unknown apps.
+> On your phone, just tap the downloaded file to install. If Android warns about an unknown source, allow your browser or file manager to install unknown apps.  
 > All previous builds are listed on the [**Releases page**](https://github.com/WeilerQi/Qivomo/releases).
 
 > 🌏 In mainland China, the [Gitee mirror](https://gitee.com/weiler_qi/qivomo/releases) is usually much faster to download from.
@@ -52,7 +59,7 @@ It is only a translation layer — "press a key, produce a finger tap":
 - ❌ It does not provide aim assist, wallhacks, speed hacks, macro farming or any other cheat-like feature
 - ✅ Its scope is the same as the system's built-in accessibility features and external input device support
 
-> **Intended for**: single-player games, offline games, emulators, accessibility assistance, development and testing, teaching demos.
+> **Intended for**: single-player games, offline games, emulators, accessibility assistance, development and testing, teaching demos.  
 > **Not recommended** for PvP, ranked or competitive games — see the [Disclaimer](DISCLAIMER.md).
 
 ---
@@ -75,11 +82,11 @@ It is only a translation layer — "press a key, produce a finger tap":
 
 ### Peripherals and feel
 
-| Category | What you can tune |
-| --- | --- |
-| 🖱️ Mouse | Sensitivity (global plus per-axis X/Y, 0.2x–3.0x), polling rate (auto / 125–1000 Hz / unlimited), smoothing (4 levels), acceleration curve (off / linear / non-linear) |
-| ⌨️ Keyboard | Repeat delay (100–1500 ms), repeat rate (5–60 per second), long-press threshold (150–2000 ms) |
-| 🎮 Gamepad | Brand detection (Xbox / Nintendo / Sony / Flydigi / BETOP / 8BitDo and more), stick dead zone, outer-ring sensitivity, response curve (linear / ease-in / ease-out / S-curve), trigger threshold |
+| Category         | What you can tune                                                                                                                                                                                                                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🖱️ Mouse        | Sensitivity (global plus per-axis X/Y, 0.2x–3.0x), polling rate (auto / 125–1000 Hz / unlimited), smoothing (4 levels), acceleration curve (off / linear / non-linear)                                                                                                                        |
+| ⌨️ Keyboard      | Repeat delay (100–1500 ms), repeat rate (5–60 per second), long-press threshold (150–2000 ms)                                                                                                                                                                                                 |
+| 🎮 Gamepad       | Brand detection (Xbox / Nintendo / Sony / Flydigi / BETOP / 8BitDo and more), stick dead zone, outer-ring sensitivity, response curve (linear / ease-in / ease-out / S-curve), trigger threshold                                                                                              |
 | 📡 Device status | Scans input devices automatically and **lists only real external hardware** (on-board nodes such as the fingerprint reader and power key are filtered out by a name blacklist plus `InputDevice.isExternal()`), showing name, connection type (wired / Bluetooth / 2.4 GHz) and battery level |
 
 Every parameter **takes effect immediately while mapping is running** — no restart needed.
@@ -106,13 +113,13 @@ Every parameter **takes effect immediately while mapping is running** — no res
 
 The button at the bottom of the activation page **walks you through in order**, and its label follows the first unfinished item:
 
-  | Situation | Button |
-  | --- | --- |
-  | Shizuku not installed | Get Shizuku |
-  | Service not running | Start the service |
-  | Qivomo not authorised | Grant access |
-  | Overlay permission missing | Open settings |
-  | All four ready | All permissions granted (greyed out) |
+| Situation                  | Button                               |
+| -------------------------- | ------------------------------------ |
+| Shizuku not installed      | Get Shizuku                          |
+| Service not running        | Start the service                    |
+| Qivomo not authorised      | Grant access                         |
+| Overlay permission missing | Open settings                        |
+| All four ready             | All permissions granted (greyed out) |
 
 ### Debugging
 
@@ -121,14 +128,6 @@ The button at the bottom of the activation page **walks you through in order**, 
 ---
 
 ## 📸 Screenshots
-
-<!-- Drop images into assets/screenshots/ and remove the comment markers below -->
-
-<!--
-| Scenes | In-place editing | Settings |
-| :---: | :---: | :---: |
-| ![](assets/screenshots/01-home.png) | ![](assets/screenshots/02-edit.png) | ![](assets/screenshots/03-settings.png) |
--->
 
 > Naming convention: `assets/screenshots/01-home.png`, `02-edit.png`, `03-settings.png`. 1080×2400 portrait, ideally under 300 KB each.
 
@@ -169,14 +168,15 @@ Qivomo gets shell access through Shizuku. **Root is not required.**
 
 ## 📋 Requirements
 
-| Item | Requirement |
-| --- | --- |
-| OS | Android 7.0 (API 24) or newer |
-| ABI | arm64-v8a / armeabi-v7a |
-| Required permissions | Shizuku authorisation, overlay, notifications |
-| Injection channel | Shizuku only (no accessibility fallback; if the injector cannot start, it reports an error and stays disabled) |
-| Network | **Not required** — the app makes no network requests |
-| Root | **Not required** |
+| Item                 | Requirement                                                                                                    |
+| -------------------- | -------------------------------------------------------------------------------------------------------------- |
+| OS                   | Android 7.0 (API 24) or newer                                                                                  |
+| ABI                  | arm64-v8a / armeabi-v7a                                                                                        |
+| Required permissions | Shizuku authorisation, overlay, notifications                                                                  |
+| Injection channel    | Shizuku only (no accessibility fallback; if the injector cannot start, it reports an error and stays disabled) |
+| Network              | **Not required** — the app makes no network requests                                                           |
+| Root                 | **Not required**                                                                                               |
+
 
 **Known limitations**
 
