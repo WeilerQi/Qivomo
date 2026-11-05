@@ -1,0 +1,116 @@
+name: Bug report
+description: Report something that isn't working in Qivomo
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        Qivomo injects touch events through Shizuku, and behaviour varies a lot between vendor ROMs. Filling in the fields below properly saves a lot of back-and-forth.
+
+        > Please search existing issues first to avoid duplicates.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Type of issue
+      options:
+        - Touch injection not working or taps land in the wrong place
+        - Overlay display or interaction problem
+        - Shizuku connection failed
+        - Settings won't save
+        - App crashes
+        - UI or visual glitch
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: What happened, as specifically as you can
+      placeholder: "Example: after tapping Start the overlay appears, but tapping the mapped button does nothing."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Qivomo
+        2. Grant Shizuku permission
+        3. Select a profile and tap Start
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Qivomo version
+      description: Shown at the bottom of the home screen or on the About page, e.g. v1.4.6
+      placeholder: v1.4.6
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: Xiaomi 14 / Pixel 8
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS version
+      description: Android version plus ROM version
+      placeholder: Android 14 / HyperOS 1.0.6
+    validations:
+      required: true
+
+  - type: input
+    id: shizuku_version
+    attributes:
+      label: Shizuku version
+      placeholder: 13.5.4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: shizuku_start
+    attributes:
+      label: How Shizuku was started
+      options:
+        - Rooted (Magisk / KernelSU)
+        - Wireless debugging (Android 11+)
+        - Activated via ADB on a PC
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots, screen recording or logs
+      description: Drag images straight into this box. Logcat output or any error message helps a lot
+      placeholder: Drop files here, or paste the error text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and this is not a duplicate
+          required: true
+        - label: I am running the latest version of Qivomo
+          required: true
+        - label: Shizuku itself works fine (other Shizuku-dependent apps function normally)
+          required: true
