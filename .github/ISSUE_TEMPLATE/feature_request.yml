@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest a new feature or an improvement
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No need to write this formally.
+
+        Describing **how you use Qivomo today** and **what feels awkward** is far more useful than describing how the feature should be implemented.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve
+      description: What is awkward or impossible right now
+      placeholder: "Example: switching between use cases means editing three settings by hand every time."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What you would like to happen
+      description: Describe the outcome, not necessarily the implementation
+      placeholder: "Example: let me save several profiles and switch with one tap."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: How you work around it today
+      description: Optional, but it helps gauge how much the feature matters
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: Your device and OS
+      placeholder: Xiaomi 14 / Android 14
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and found no similar request
+          required: true
