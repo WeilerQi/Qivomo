@@ -1,0 +1,2 @@
+# 允许用户创建空白 Issue（不选模板）
+blank_issues_enabled: true
