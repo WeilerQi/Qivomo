@@ -2,7 +2,7 @@
 
 Release history for Qivomo, newest first. Each entry describes what changed from a user's point of view — what you can see or feel, not how it was implemented.
 
-**How versions are numbered**: the last digit always moves one step at a time (1.2.3 → 1.2.4 → … → 1.2.9 → 1.3.0). The middle digit only bumps once the last digit reaches 9, and the first digit is reserved for architectural changes. Version numbers and release tags match exactly.
+**How versions are numbered**: the last digit always moves one step at a time (1.2.3 → 1.2.4 → … → 1.2.9 → 1.3.0). The middle digit only bumps once the last digit reaches 9, and the first digit is reserved for architectural changes.
 
 ---
 
@@ -11,17 +11,17 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 **Added**
 
 - New **Support the developer** entry on the About page, with Bilibili, Alipay and WeChat. If the matching app is installed you are asked once before it opens; if not, the browser takes over, so a tap never does nothing.
-- Payment QR codes can be saved to your gallery, so you can scan them later.
+- The Alipay and WeChat QR codes can be viewed and saved to your gallery inside the app, so you can scan them later.
 
 **Improved**
 
 - The four About page entries are reordered: About the developer → Support the developer → Disclaimer → Check for updates.
-- **Check for updates** now takes you straight to the Gitee releases page (marked "recommended in mainland China"); the GitHub repository is still being set up.
-- The APK is much smaller: **7.2 MB → 1.8 MB**. Installing and launching are both faster.
+- **Check for updates** now takes you straight to the Gitee releases page (recommended in mainland China); the GitHub repository is still being set up.
+- The download is much smaller: about 7.2 MB → 1.8 MB, so installing and launching are both faster.
 
 **Notes**
 
-- **This release uses a new signing key, so upgrading from an older version requires uninstalling first.** Android will not install a package over one signed by a different key. Uninstalling wipes your configuration and the "disclaimer accepted" state — export your configuration under **Settings → General → Export** in the old build, then import it after installing.
+- **This release is signed with a new key, so upgrading from an older version requires uninstalling first.** Android will not install it over a package signed differently. Uninstalling wipes your configuration and the "disclaimer accepted" state — export your configuration under **Settings → General → Export** in the old build, then import it after installing.
 - This is a one-time change: from v1.4.6 onward all releases share the same key, and later upgrades install over the top.
 - v1.4.5 remains the oldest version you can roll back to.
 
@@ -35,7 +35,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 **Notes**
 
 - As of v1.4.5, **v1.4.5 is the oldest installable version**: rolling back later is only possible to this release, and earlier builds are no longer published.
-- A rollback requires **uninstalling** the current version first (Android will not install a lower versionCode), and uninstalling wipes your configuration and the "disclaimer accepted" state. Export a JSON file or share code beforehand.
+- A rollback requires **uninstalling** the current version first (Android will not install an older build over a newer one), and uninstalling wipes your configuration and the "disclaimer accepted" state. Export a backup beforehand.
 
 ## v1.4.4 — 2026-11-02
 
@@ -45,7 +45,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 **Fixed**
 
-- The device list no longer shows internal on-board nodes such as "fingerprint" or "pmic_pwrkey"; only real keyboards, mice and gamepads are listed.
+- The device list no longer shows internal on-board nodes such as "fingerprint" or "power key"; only real keyboards, mice and gamepads are listed.
 
 ## v1.4.3 — 2026-11-02
 
@@ -57,17 +57,18 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 **Removed**
 
-- Removed the accessibility service. It could not read mouse movement, only supported single taps, and would abruptly interrupt camera drags — in practice it was barely usable.
+- Removed the accessibility fallback. It could not read mouse movement, only supported single taps, and would abruptly interrupt camera drags — in practice it was barely usable.
 
 **Improved**
 
 - The overlay permission request on first launch is now a "go there?" confirmation, so you can answer no and grant it later instead of being asked repeatedly.
-- The bottom button on the Activation & permissions page now guides you in order: it names whichever item is missing, and shows "All permissions granted" once all four are ready.
+- The bottom button on the Activation & permissions page now guides you in order: it names whichever item is missing, and shows "All permissions granted" once everything is ready.
+- The top status line shows "Activated" when everything is ready, or lists exactly what is still missing.
 - Profiles now switch automatically when you move to a bound app — faster to detect and easier on the battery.
 
 **Fixed**
 
-- Injection failures now state the actual reason instead of reporting "switched to accessibility tap", which made it look like things still worked.
+- Injection failures now state the actual reason and stay disabled, instead of reporting a fallback that looked like it still worked.
 
 ## v1.4.1 — 2026-11-01
 
@@ -130,11 +131,11 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 **Fixed**
 
-- Fixed the path Scenes → New → Settings → tap Scenes landing back on New; each entry now returns to its own page.
+- Fixed the path Scenes → New → Settings → tap Scenes landing back on New; the three entries are now equal-level tabs that switch independently.
 
 **Improved**
 
-- The share code prefix changed from `KM1.` to `QVM.` to match the app. Share codes you exported earlier still import fine.
+- The share code prefix changed to **QVM.** to match the app. Share codes you exported earlier still import fine.
 
 ## v1.3.4 — 2026-10-31
 
@@ -177,7 +178,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 **Added**
 
-- New capsule-shaped floating navigation bar at the bottom, gathering **Import / New / Settings** into one strip.
+- New capsule-shaped floating navigation bar at the bottom, gathering Import / New / Settings into one strip.
 - Settings categories can be swiped left and right, following your finger.
 
 **Fixed**
@@ -202,7 +203,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 **Fixed**
 
-- Fixed the page flicker when going back (the previous two releases only patched the symptoms).
+- Fixed the page flicker when going back, for good (the previous two releases only patched the symptoms).
 
 ## v1.2.7 — 2026-10-29
 
@@ -234,7 +235,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 **Improved**
 
 - The scene name is filled in with the app name once you pick a bound app; it is not overwritten if you have edited it by hand.
-- The custom resolution field can be cleared and retyped properly, and now has a **Save** button.
+- The custom resolution field can be cleared and retyped properly, and now has a **Save** button with error hints.
 
 ## v1.2.4 — 2026-10-29
 
@@ -242,6 +243,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 - New **Settings** entry on the home screen, with a redesigned in-app settings page: navigation on the left on wide screens, category tabs on top on narrow ones, grouped cards for content.
 - Settings mirror the floating ball menu one-to-one; either place can change them.
+
 
 **Fixed**
 
@@ -292,7 +294,7 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 - Mouse: sensitivity (global and per-axis), polling rate, smoothing, acceleration curve.
 - Keyboard: repeat delay and rate, long-press threshold.
 - Gamepad: brand detection, stick dead zone and outer-ring sensitivity, response curve, trigger threshold, rapid-fire interval, vibration strength.
-- Theme: primary, secondary, text and outline colours, with colour wheel, HEX and RGB in sync.
+- Theme: primary, secondary, text and outline colours, with colour wheel, HEX and RGB in sync; bold text is optional.
 - The floating ball's shape, size, opacity and position lock are adjustable; when hidden it collapses into three dots at the top of the screen.
 - New debug overlays: pointer crosshair, key event log, polling-rate statistics.
 
@@ -304,12 +306,12 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 
 **Improved**
 
-- The app was renamed from KeyMap to Qivomo, with a new icon, package name and APK file names.
-- Version numbering is centralised, APK file names carry the version, and the home screen shows the current version.
+- The app was renamed from KeyMap to Qivomo, with a new icon and versioned APK file names.
+- Version numbering is centralised, and the home screen shows the current version.
 
 **Notes**
 
-- The package name changed, so this counts as a different app: **you cannot install it over the old version — uninstall first.** Export your configuration as JSON from the old build and import it into the new one.
+- The app identity changed, so this counts as a different app: **you cannot install it over the old version — uninstall first.** Export your configuration from the old build and import it into the new one.
 
 ## v1.0.0 — 2026-10-26
 
@@ -318,41 +320,4 @@ Release history for Qivomo, newest first. Each entry describes what changed from
 - First release (called KeyMap at the time): Shizuku authorisation takes over the physical keyboard and mouse and translates key presses and mouse movement into touch input.
 - Scene profiles with per-app auto switching, macro steps, multi-touch and gestures.
 - Floating ball entry point and overlay editing: drag controls into place, learn keys.
-- JSON import/export and share codes for configurations.
-
----
-
-## Version reference
-
-| Version | versionCode | Released | Release APK size |
-| --- | --- | --- | --- |
-| v1.4.6 | 31 | 2026-11-03 | 1,862,066 bytes |
-| v1.4.5 | 30 | 2026-11-02 | 7,246,110 bytes |
-| v1.4.4 | 29 | 2026-11-02 | 7,246,106 bytes |
-| v1.4.3 | 28 | 2026-11-02 | 7,246,110 bytes |
-| v1.4.2 | 27 | 2026-11-02 | — |
-| v1.4.1 | 26 | 2026-11-01 | 7,246,838 bytes |
-| v1.4.0 | 25 | 2026-11-01 | 7,230,454 bytes |
-| v1.3.9 | 24 | 2026-11-01 | 7,214,070 bytes |
-| v1.3.8 | 23 | 2026-11-01 | 7,214,070 bytes |
-| v1.3.7 | 22 | 2026-11-01 | 7,214,070 bytes |
-| v1.3.6 | 21 | 2026-11-01 | 7,214,070 bytes |
-| v1.3.5 | 20 | 2026-11-01 | 7,214,070 bytes |
-| v1.3.4 | 19 | 2026-10-31 | 7,214,070 bytes |
-| v1.3.3 | 18 | 2026-10-31 | 7,144,214 bytes |
-| v1.3.2 | 17 | 2026-10-31 | 7,144,214 bytes |
-| v1.3.1 | 16 | 2026-10-31 | 7,144,214 bytes |
-| v1.3.0 | 15 | 2026-10-29 | 7,127,830 bytes |
-| v1.2.9 | 14 | 2026-10-29 | 7,127,830 bytes |
-| v1.2.8 | 13 | 2026-10-29 | 7,127,830 bytes |
-| v1.2.7 | 12 | 2026-10-29 | 7,127,830 bytes |
-| v1.2.6 | 11 | 2026-10-29 | 7,127,830 bytes |
-| v1.2.5 | 10 | 2026-10-29 | 7,127,830 bytes |
-| v1.2.4 | 9 | 2026-10-29 | 7,111,446 bytes |
-| v1.2.3 | 7 → 8 (repackaged once) | 2026-10-29 | 7,062,294 bytes |
-| v1.2.2 | 6 | 2026-10-29 | 7,062,294 bytes |
-| v1.2.1 | 5 | 2026-10-28 | 7,062,294 bytes |
-| v1.2.0 | 4 | 2026-10-28 | 7,062,294 bytes |
-| v1.1.0 | 3 | 2026-10-28 | 7,045,962 bytes |
-| v1.0.1 | 2 | 2026-10-28 | — |
-| v1.0.0 | 1 | 2026-10-26 | — |
+- Configuration import/export and share codes.
