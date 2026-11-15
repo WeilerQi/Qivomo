@@ -6,12 +6,12 @@
 
 **Bring the feel of a keyboard and mouse to mobile games**
 
-A local input-mapping tool for Android　·　No memory reading　·　No game files touched　·　No network access
+A local input-mapping tool for Android　·　No game-memory reading　·　No game files touched　·　Your data stays on-device
 
 [![Version](https://img.shields.io/badge/version-v1.4.6-4F7CAC?style=flat-square)](https://github.com/WeilerQi/Qivomo/releases)
 [![Platform](https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](#-requirements)
 [![Size](https://img.shields.io/badge/size-1.8%20MB-9C6ADE?style=flat-square)](https://github.com/WeilerQi/Qivomo/releases)
-[![License](https://img.shields.io/badge/license-proprietary%20%C2%B7%20free%20to%20use-555?style=flat-square)](#-about-this-repository)
+[![License](https://img.shields.io/badge/license-proprietary%20%C2%B7%20local%20features%20free%20forever-555?style=flat-square)](#-about-this-repository)
 
 [**⬇️ Download the latest version**](https://github.com/WeilerQi/Qivomo/releases)　|　[Changelog](CHANGELOG.md)　|　[Disclaimer](DISCLAIMER.md)　|　[Report an issue](https://github.com/WeilerQi/Qivomo/issues)
 
@@ -26,6 +26,8 @@ A local input-mapping tool for Android　·　No memory reading　·　No game f
 | Version | Size | Requires | Download |
 | --- | --- | --- | --- |
 | **v1.4.6** | 1.8 MB | Android 7.0+ | [**Download APK**](https://github.com/WeilerQi/Qivomo/releases/download/v1.4.6/Qivomo-v1.4.6.apk) |
+
+> Starting with v1.5.0 there will be two builds: **Standard** (in-app updates) and **Lite** (no network permission). v1.4.6 is a single, fully offline build.
 
 > Only the signed release build is published. If a copy of Qivomo has been repackaged, re-signed or otherwise modified by a third party, it did not come from this project — do not install it.
 
@@ -96,7 +98,7 @@ Every parameter **takes effect immediately while mapping is running** — no res
 
 - **JSON import/export**: the full structure, including app bindings, is preserved
 - **Share code**: export as a single line of text (`QVM.xxxxx`) and paste it to import; the old `KM1.` prefix is still accepted
-- Everything is stored **on your device** — nothing is uploaded anywhere
+- Profiles, settings and logs stay **on your device**; the current build collects and uploads none of them
 
 ### First launch and permissions
 
@@ -167,6 +169,15 @@ Qivomo gets shell access through Shizuku. **Root is not required.**
 
 ---
 
+## 🔒 Network & privacy
+
+- **v1.4.6 (current)**: no network permission and no network requests; profiles, settings and logs stay on your device.
+- **From v1.5.0**: two builds. **Lite** requests no network permission at all; **Standard** goes online only to check for updates and download the package — the request carries the current version code, no device identifiers or account.
+- **Data**: neither build collects or uploads profiles, settings, logs or usage data. Update packages are checked (sha256 + signature) before the system installer opens.
+- **Later**: existing local features stay free and will never be paywalled. Any future online service (cloud sync, online sharing) will be optional, explained separately and consented to separately.
+
+---
+
 ## 📋 Requirements
 
 | Item | Requirement |
@@ -175,7 +186,7 @@ Qivomo gets shell access through Shizuku. **Root is not required.**
 | ABI | arm64-v8a / armeabi-v7a |
 | Required permissions | Shizuku authorisation, overlay, notifications |
 | Injection channel | Shizuku only (no accessibility fallback; if the injector cannot start, it reports an error and stays disabled) |
-| Network | **Not required** — the app makes no network requests |
+| Network | **Not required for Lite** (no network permission); Standard uses it only for update checks. v1.4.6 is fully offline |
 | Root | **Not required** |
 
 **Known limitations**
@@ -225,7 +236,14 @@ Check in this order: ① is the Shizuku service running (the system may kill it 
 <details>
 <summary><b>Does it upload my data?</b></summary>
 
-No. There is no business logic that talks to the network: profiles, settings and logs all stay on your device. A share code is a piece of text you copy out yourself; it never passes through a server.
+The current build does not. Neither Lite nor Standard collects or uploads profiles, settings, logs or usage data. Lite requests no network permission; Standard contacts the official site only to fetch the version manifest and download an update, and that request carries just the current version code — no device identifiers or account. A share code is still a piece of text you copy out yourself; it never passes through a server.
+
+</details>
+
+<details>
+<summary><b>Will it ever cost money?</b></summary>
+
+Existing local features will stay free and will never be paywalled. If a future online service (such as cloud sync or online sharing) is introduced, it will be optional, priced and explained separately, announced in advance and consented to separately. Not subscribing will not affect local use.
 </details>
 
 ---
